@@ -24,7 +24,7 @@ A modern and stylish 3D calculator built using HTML, CSS, and JavaScript. This c
 
 📂 Installation
 1.	Clone the repository:
-git clone https://github.com/your-username/3D-Calculator.git
+https://github.com/bhataakib02/3D-Calculator.git
 2.	Navigate to the project folder:
 cd 3D-Calculator
 3.	Open index.html in your browser.
