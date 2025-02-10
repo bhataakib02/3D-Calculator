@@ -1,0 +1,161 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+
+/* General Page Styling */
+body {
+    display: flex; /* Centers the calculator on the page */
+    justify-content: center; /* Aligns it horizontally */
+    align-items: center; /* Aligns it vertically */
+    height: 100vh; /* Takes full viewport height */
+    background: #dce1e7; /* Light background for contrast */
+    font-family: 'Poppins', sans-serif; /* Sets font style */
+    margin: 0;
+    padding: 0;
+}
+
+/* Calculator Container (3D Raised Effect) */
+.calculator {
+    width: 100%;
+    max-width: 350px; /* Limits max width for responsiveness */
+    padding: 20px;
+    background: linear-gradient(145deg, #474785, #1d3a6e); /* Deep blue gradient */
+    border-radius: 30px; /* Rounded corners */
+    border: 4px solid #1b2c5a; /* Gives a 3D edge */
+    box-shadow: 6px 6px 0px #1b2c5a, -6px -6px 0px #5a6ea7; /* Creates a raised effect */
+    display: flex;
+    flex-direction: column; /* Aligns elements in a column */
+}
+
+/* Display Section (Dark Theme) */
+#display {
+    width: 100%;
+    height: 120px; /* Large display area */
+    font-size: 3em; /* Large text for easy readability */
+    text-align: right; /* Aligns text to the right */
+    background: linear-gradient(145deg, #0d4248, #393e46); /* Dark glossy black */
+    color: #00f5d4; /* Neon Cyan for futuristic look */
+    border: none; /* Removes default border */
+    outline: none; /* Removes outline */
+    padding: 1; /* Spacing inside the display */
+    border-radius: 20px; /* Rounded corners */
+    overflow: hidden; /* Prevents text overflow */
+    white-space: nowrap; /* Prevents text from wrapping */
+    text-overflow: ellipsis; /* Adds '...' when text overflows */
+    display: flex;
+    align-items: center; /* Centers text vertically */
+    justify-content: flex-end; /* Aligns text to the right */
+    border: 4px solid #1b2c5a; /* 3D border effect */
+}
+
+/* Buttons Grid */
+.buttons {
+    display: grid; /* Uses grid layout for buttons */
+    grid-template-columns: repeat(4, 1fr); /* 4 columns */
+    gap: 15px; /* Space between buttons */
+    margin-top: 10px; /* Space between display and buttons */
+}
+
+/* General Button Styling (3D Look) */
+button {
+    width: 70px;
+    height: 70px;
+    font-size: 1.8em; /* Large font for buttons */
+    border: 3px solid #1b2c5a; /* 3D border effect */
+    border-radius: 50%; /* Makes buttons circular */
+    cursor: pointer; /* Pointer cursor for interactivity */
+    font-weight: 600; /* Bold text */
+    background: linear-gradient(145deg, #4a90e2, #3572a5); /* Blue gradient */
+    color: white;
+    transition: transform 0.15s ease-in-out; /* Smooth button press effect */
+}
+
+/* 3D Pressed Effect */
+button:active {
+    transform: translateY(4px); /* Moves button slightly downward when pressed */
+    background: linear-gradient(145deg, #3572a5, #4a90e2); /* Slight color change */
+    border-top: 3px solid #3572a5;
+    border-bottom: 3px solid #1b2c5a;
+}
+
+/* Function and Operator Buttons (Bright Orange) */
+.function, .operator {
+    background: linear-gradient(145deg, #ff9500, #d87b00); /* Bright orange for operations */
+    border: 3px solid #b35a00; /* Darker orange border */
+    color: white;
+}
+.function:active, .operator:active {
+    background: linear-gradient(145deg, #d87b00, #ff9500); /* Slight color change on press */
+    transform: translateY(4px);
+}
+
+/* Equal Button (Glowing Green) */
+.equal {
+    background: linear-gradient(145deg, #34c759, #28a745); /* Green gradient */
+    border: 3px solid #1b5e20; /* Darker green border */
+    color: white;
+}
+.equal:active {
+    background: linear-gradient(145deg, #28a745, #34c759); /* Slight color change on press */
+    transform: translateY(4px);
+}
+
+/* AC Button (Red) */
+.ac {
+    background: linear-gradient(145deg, #ff3b30, #c62828); /* Red gradient for AC button */
+    border: 3px solid #8b0000; /* Darker red border */
+    color: white;
+}
+.ac:active {
+    background: linear-gradient(145deg, #c62828, #ff3b30); /* Slight color change on press */
+    transform: translateY(4px);
+}
+
+/* Full Responsiveness for Small Screens */
+@media (max-width: 500px) {
+    .calculator {
+        width: 90%; /* Adjusts width for smaller screens */
+        max-width: 320px;
+        padding: 15px;
+    }
+
+    #display {
+        font-size: 2.2em; /* Smaller font size for small screens */
+        height: 80px; /* Adjusts display height */
+        padding: 10px;
+    }
+
+    .buttons {
+        gap: 10px; /* Reduces button gap */
+    }
+
+    button {
+        width: 65px; /* Adjusts button size */
+        height: 65px;
+        font-size: 1.6em; /* Reduces font size */
+    }
+}
+
+/* Ultra Small Screens */
+@media (max-width: 360px) {
+    .calculator {
+        width: 95%;
+        max-width: 300px;
+        padding: 10px;
+    }
+
+    #display {
+        font-size: 1.8em; /* Further reduces font size */
+        height: 70px;
+        padding: 8px;
+    }
+
+    .buttons {
+        gap: 8px; /* Reduces button gap */
+    }
+
+    button {
+        width: 60px; /* Reduces button size */
+        height: 60px;
+        font-size: 1.4em;
+    }
+}

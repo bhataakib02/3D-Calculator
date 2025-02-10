@@ -1,0 +1,56 @@
+<!DOCTYPE html> <!-- Declares the document type as HTML5 -->
+<html lang="en"> <!-- Specifies the language as English -->
+
+<head>
+    <meta charset="UTF-8"> <!-- Sets the character encoding to UTF-8 for compatibility -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Makes the page responsive for different screen sizes -->
+    <title>3D Calculator</title> <!-- Sets the title of the webpage -->
+    <link rel="stylesheet" href="style.css"> <!-- Links an external CSS file for styling -->
+</head>
+
+<body>
+
+    <!-- Main calculator container -->
+    <div class="calculator">
+        <!-- Display screen for the calculator -->
+        <input type="text" id="display" disabled> <!-- Input field to show user input and results, disabled to prevent manual typing -->
+
+        <!-- Container for all calculator buttons -->
+        <div class="buttons">
+            <!-- First row: Operators -->
+            <button class="operator ac" onclick="clearDisplay()">AC</button> <!-- Clears the display -->
+            <button class="operator" onclick="deleteLast()">⌫</button> <!-- Deletes the last entered character -->
+            <button class="operator" onclick="appendToDisplay('%')">%</button> <!-- Adds modulus operator -->
+            <button class="operator" onclick="appendToDisplay('/')">÷</button> <!-- Adds division operator -->
+
+            <!-- Second row: Numbers and multiplication -->
+            <button onclick="appendToDisplay('7')">7</button> <!-- Adds number 7 -->
+            <button onclick="appendToDisplay('8')">8</button> <!-- Adds number 8 -->
+            <button onclick="appendToDisplay('9')">9</button> <!-- Adds number 9 -->
+            <button class="operator" onclick="appendToDisplay('*')">×</button> <!-- Adds multiplication operator -->
+
+            <!-- Third row: Numbers and subtraction -->
+            <button onclick="appendToDisplay('4')">4</button> <!-- Adds number 4 -->
+            <button onclick="appendToDisplay('5')">5</button> <!-- Adds number 5 -->
+            <button onclick="appendToDisplay('6')">6</button> <!-- Adds number 6 -->
+            <button class="operator" onclick="appendToDisplay('-')">−</button> <!-- Adds subtraction operator -->
+
+            <!-- Fourth row: Numbers and addition -->
+            <button onclick="appendToDisplay('1')">1</button> <!-- Adds number 1 -->
+            <button onclick="appendToDisplay('2')">2</button> <!-- Adds number 2 -->
+            <button onclick="appendToDisplay('3')">3</button> <!-- Adds number 3 -->
+            <button class="operator" onclick="appendToDisplay('+')">+</button> <!-- Adds addition operator -->
+
+            <!-- Fifth row: Zero, double zero, decimal, and equal button -->
+            <button onclick="appendToDisplay('0')">0</button> <!-- Adds number 0 -->
+            <button onclick="appendToDisplay('00')">00</button> <!-- Adds double zero for convenience -->
+            <button onclick="appendToDisplay('.')">.</button> <!-- Adds decimal point -->
+            <button class="equal" onclick="calculateResult()">=</button> <!-- Calculates the result -->
+        </div>
+    </div>
+
+    <!-- Link to external JavaScript file -->
+    <script src="script.js"></script> 
+</body>
+
+</html>
