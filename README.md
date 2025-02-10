@@ -41,21 +41,3 @@ cd 3D-Calculator
 This project is open-source and available under the MIT License.
 
 
-📂 Installation
-1.	Clone the repository:
-git clone https://github.com/your-username/3D-Calculator.git
-2.	Navigate to the project folder:
-cd 3D-Calculator
-3.	Open index.html in your browser.
-🛠️ Technologies Used
-•	HTML5 – Structure of the calculator
-•	CSS3 – Styling with 3D effects and animations
-•	JavaScript – Core functionality and interactivity
-📌 How to Use
-1.	Click on the buttons to input numbers and operations.
-2.	Press AC to clear the display.
-3.	Use ⌫ to delete the last digit.
-4.	Click = to calculate the result.
-📜 License
-This project is open-source and available under the MIT License.
-
